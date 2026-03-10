@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - TikTok店铺数据分析工具 | TikTok API Compliant</title>
+    <meta name="robots" content="index, follow">
+    <style>
+        /* 全局样式重置 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        h2 {
+            color: #2563eb;
+            margin: 25px 0 15px;
+            font-size: 18px;
+        }
+        /* 语言切换按钮样式 */
+        .lang-toggle {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-toggle button {
+            padding: 10px 20px;
+            border: none;
+            background: #2563eb;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background 0.3s;
+        }
+        .lang-toggle button:hover {
+            background: #1d4ed8;
+        }
+        /* 语言区块切换：默认显示英文 */
+        .lang-section { display: block; }
+        .cn-section { display: none; }
+        .highlight { color: #dc2626; font-weight: bold; }
+        .tiktok-note {
+            background: #fef3f2;
+            padding: 10px;
+            border-left: 4px solid #dc2626;
+            margin: 15px 0;
+        }
+        ul, ol { margin-left: 25px; margin-bottom: 15px; }
+        .update-note {
+            font-style: italic;
+            color: #6b7280;
+            margin: 10px 0 20px;
+        }
+        .signature {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .container { padding: 20px; }
+            h1 { font-size: 20px; }
+            h2 { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 语言切换按钮 -->
+        <div class="lang-toggle">
+            <button onclick="showEn()">English</button>
+            <button onclick="showCn()">中文</button>
+        </div>
+
+        <!-- 英文版本（TikTok审核核心） -->
+        <div class="en-section lang-section">
+            <h1>Privacy Policy</h1>
+            <p class="update-note"><strong>Last updated:</strong> 2026年3月9日 | <strong>Effective date:</strong> 2026年3月9日</p> <!-- 修改：更新日期 -->
+            <div class="tiktok-note">
+                <p>This Privacy Policy is compliant with TikTok Developer Policies (2026), TikTok Global Data Processing Agreement (GDPA), Standard Contractual Clauses (SCCs) under GDPR, and China's Measures for Standard Contracts for Outbound Transfer of Personal Information.</p>
+            </div>
+
+            <p>This Privacy Policy describes how TikTok店铺数据分析工具 (operated by 佛山市赫本服装实业有限公司, "we", "us", or "our") collects, uses, stores, and protects your personal information when you use our application integrated with TikTok API (including video publishing functionality).</p> <!-- 修改：新增视频发布功能说明 -->
+
+            <h2>1. Information We Collect (Data Minimization)</h2>
+            <p>We strictly adhere to TikTok's "data minimization" principle and only collect the following necessary public information:</p>
+            <ul>
+                <li>TikTok Public Profile Data: 公开昵称, 头像URL, 用户openID（仅用于身份标识）, 店铺订单量/客单价/成交金额/库存状态（仅公开数据）, 视频播放量/点赞数/评论数/转化率（仅公开数据）, 竞品店铺交易数据/热销品信息（仅公开数据）</li>
+                <li>Device Information (fully anonymized): 不收集用户设备IP地址，仅记录访问日志的脱敏IP（前两段）用于安全审计</li>
+                <li>Voluntarily provided information (only when you choose to submit it): Video files/links, video captions, hashtags (only for authorized video publishing) <!-- 新增：视频发布相关自愿提交信息 --></li>
+            </ul>
+            <p class="highlight">We DO NOT collect sensitive data (e.g., phone number, precise GPS location, biometrics, user private messages, payment information, trade secrets of competitors, or TikTok private content).</p>
+
+            <h2>2. How We Use Your Information</h2>
+            <p>We use the collected TikTok public data ONLY for the following specific, TikTok-approved business purposes (strictly adhering to TikTok Developer Policies 2026 and data minimization principle):</p>
+            <ol>
+                <li>Analyze TikTok Shop operational data (order volume, unit price, transaction amount, inventory status) and video performance data (play count, like count, comment count, conversion rate) to generate real-time operational reports for merchants, helping them optimize product pricing and content release strategies.</li>
+                <li>Collect and analyze public competitor data (shop transaction data, best-selling product information, video operation performance) to provide merchants with market trend analysis and operational optimization suggestions (only use publicly disclosed data, no access to trade secrets or private information of competitors).</li>
+                <li>Extract and analyze video scripts of best-selling products (only from public TikTok videos) to help merchants optimize content creation strategies, improve video conversion rates, and comply with TikTok Content Policy and Intellectual Property Rules.</li>
+                <li>Authenticate user identity via TikTok Login Kit (apply for shop.data.read, video.list, user.info.basic basic permissions, and video.upload, video.publish permissions for authorized video publishing; never apply for sensitive permissions such as comment.write, message.read, or user.phoneNumber.read). <!-- 修改：删除content.create，新增视频发布权限 --></li>
+                <li>Ensure service security and prevent fraudulent activities (e.g., abnormal order detection, account anti-counterfeiting) in accordance with TikTok Security Rules and anti-cheating mechanisms, without interfering with TikTok's platform operation.</li>
+                <li>Upload and publish videos to TikTok via official Content Posting API (only with explicit user authorization) to help merchants implement scheduled/batch video publishing strategies, fully compliant with TikTok Content Posting Policy and rate limits. <!-- 新增：视频发布场景 --></li>
+            </ol>
+
+            <h2>3. Data Compliance Commitment</h2>
+            <ul>
+                <li>We DO NOT collect sensitive data (e.g., phone number, precise GPS location, biometrics, user private messages, payment information).</li>
+                <li>Data transmission: All data is encrypted via TLS 1.3 (end-to-end encryption) when interacting with TikTok US servers, fully compliant with TikTok Global Data Processing Agreement (GDPA) and Standard Contractual Clauses (SCCs) under GDPR.</li>
+                <li>Data storage: Stored on Alibaba Cloud servers in China (mainland), with cross-border transmission of necessary data to TikTok US servers approved by Chinese regulatory authorities (in accordance with the Measures for Standard Contracts for Outbound Transfer of Personal Information).</li>
+                <li>Data retention: 90 days for business data (immediately deleted upon user account cancellation); 30 days for access logs (permanently deleted after expiration, no backup retention); Video files/links for publishing are retained only until successful publishing and then immediately deleted. <!-- 新增：视频发布数据留存规则 --></li>
+                <li>Data usage boundary: No secondary use, no data monetization, no user profiling, and no personalized advertising based on collected data.</li>
+            </ul>
+
+            <h2>4. Data Sharing & Disclosure</h2>
+            <p>We <strong>never sell, rent, lease, or share</strong> your personal information to any third parties except as required by TikTok or law:</p>
+            <ul>
+                <li>With TikTok Inc.: Only necessary data to enable TikTok API functionality (including video publishing data, encrypted via TLS 1.3; cross-border transmission complies with China's outbound data transfer regulations). <!-- 修改：新增视频发布数据 --></li>
+                <li>Legal Compliance: When required by applicable laws, regulations, or valid legal processes (e.g., court orders, regulatory inquiries).</li>
+                <li>Security Protection: To protect our legitimate rights, user safety, or prevent illegal activities (per TikTok's requirements; no data sharing with non-approved third parties).</li>
+            </ul>
+
+            <h2>5. Children's Privacy Protection</h2>
+            <p>Our service is not intended for children under the age of 13 (per U.S. COPPA regulations). We do not knowingly collect personal information from children under 13.</p>
+            <p>If we become aware that we have collected personal information from a child under 13, we will immediately delete such information within 24 hours. Parents/guardians may contact us at legal@xxcompany.com to request removal of their child's data (response within 7 business days).</p>
+
+            <h2>6. Your Rights (Data Subject Rights)</h2>
+            <p>You have the right to exercise the following rights by contacting us at legal@xxcompany.com (response within 15 business days):</p>
+            <ul>
+                <li>Access: Request a copy of your personal data we hold (in CSV format).</li>
+                <li>Correction: Request correction of inaccurate personal data.</li>
+                <li>Deletion: Request deletion of your personal data (subject to legal exceptions).</li>
+                <li>Withdrawal of Consent: Revoke your consent to data processing at any time (via TikTok App > Settings > Authorized Apps > Revoke access to TikTok店铺数据分析工具; revocation will immediately stop pending video publishing tasks). <!-- 修改：新增撤销授权对视频发布的影响 --></li>
+                <li>Data Portability: Request a copy of your data in a machine-readable format (CSV/JSON).</li>
+            </ul>
+
+            <h2>7. Data Security Measures</h2>
+            <p>We implement TikTok-approved security measures to protect your data:</p>
+            <ul>
+                <li>Transmission: End-to-end encryption (TLS 1.3) for all data transfers (including cross-border transmission to TikTok US servers, and video publishing data).</li> <!-- 修改：新增视频发布数据加密 -->
+                <li>Storage: AES-256 encryption for stored data (Alibaba Cloud servers in China mainland).</li>
+                <li>Access Control: Role-based access control (RBAC) with multi-factor authentication (only authorized personnel can access data).</li>
+                <li>Audit: Monthly security audits and vulnerability scanning (compliant with TikTok's security standards).</li>
+                <li>Breach Notification: Notify users and authorities within 72 hours of detecting a data breach (per TikTok requirements and China's PIPL).</li>
+                <li>Log Retention: Access logs are retained for 30 days and then permanently deleted (no backup).</li>
+            </ul>
+
+            <h2>8. Changes to This Policy</h2>
+            <p>We may update this policy when required by TikTok Developer Policies or applicable laws (including cross-border data regulations). We will:</p>
+            <ul>
+                <li>Post the updated policy on this page with a new "Last updated" date.</li>
+                <li>Notify you via email/in-app notification 30 days before material changes take effect.</li>
+                <li>Provide an option to opt out of changes (you may delete your account if you disagree with the updated policy).</li>
+            </ul>
+
+            <h2>9. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy or wish to exercise your data rights, please contact us:</p>
+            <ul>
+                <li>Operator: 佛山市赫本服装实业有限公司</li>
+                <li>Email: luengtiger@gmail.com</li>
+                <li>Website: https://www.lezshoou.com</li>
+                <li>Response Time: We will respond to your request within 15 business days (7 days for children's data requests).</li>
+            </ul>
+
+            <div class="signature">
+                <p>Signed by: 佛山市赫本服装实业有限公司</p>
+                <p>Date: 2026年3月9日</p> <!-- 修改：更新签署日期 -->
+            </div>
+        </div>
+
+        <!-- 中文版本 -->
+        <div class="cn-section lang-section">
+            <h1>隐私政策</h1>
+            <p class="update-note"><strong>最后更新日期：</strong> 2026年3月9日 | <strong>生效日期：</strong> 2026年3月9日</p> <!-- 修改：更新日期 -->
+            <div class="tiktok-note">
+                <p>本隐私政策符合TikTok 2026开发者政策、TikTok全球数据处理协议（GDPA）、GDPR下的标准合同条款（SCC）及《个人信息出境标准合同办法》要求。</p>
+            </div>
+
+            <p>本隐私政策由佛山市赫本服装实业有限公司运营的TikTok店铺数据分析工具（以下简称“我们”）制定，旨在说明您使用集成TikTok API的本应用（含视频发布功能）时，我们如何收集、使用、存储和保护您的个人信息。</p> <!-- 修改：新增视频发布功能说明 -->
+
+            <h2>1. 我们收集的信息（数据最小化原则）</h2>
+            <p>我们严格遵循TikTok“数据最小化”原则，仅收集以下必要的公开信息：</p>
+            <ul>
+                <li>TikTok公开资料：公开昵称, 头像URL, 用户openID（仅用于身份标识）, 店铺订单量/客单价/成交金额/库存状态（仅公开数据）, 视频播放量/点赞数/评论数/转化率（仅公开数据）, 竞品店铺交易数据/热销品信息（仅公开数据）</li>
+                <li>设备信息（完全匿名化）：不收集用户设备IP地址，仅记录访问日志的脱敏IP（前两段）用于安全审计</li>
+                <li>您自愿提交的信息（仅在您主动提供时收集）：视频文件/链接、视频标题、话题标签（仅用于授权后的视频发布） <!-- 新增：视频发布相关自愿提交信息 --></li>
+            </ul>
+            <p class="highlight">我们不会收集敏感数据（如手机号、精确GPS定位、生物识别信息、用户私信、支付信息、竞品商业秘密、TikTok私密内容）。</p>
+
+            <h2>2. 信息使用目的</h2>
+            <p>我们仅将收集的TikTok公开数据用于TikTok批准的以下特定商业场景（严格遵循TikTok 2026开发者政策及数据最小化原则）：</p>
+            <ol>
+                <li>分析TikTok店铺运营数据（订单量、客单价、成交金额、库存状态）及视频表现数据（播放量、点赞数、评论数、转化率），为商家生成实时运营报表，助力商家优化商品定价、内容发布策略。</li>
+                <li>收集并分析竞品公开数据（店铺交易数据、热销品信息、视频运营表现），为商家提供市场趋势分析及运营优化建议（仅使用公开披露数据，不获取竞品商业秘密或私密信息）。</li>
+                <li>提取分析热销品的视频脚本（仅来自TikTok公开视频内容），帮助商家优化内容创作策略、提升视频转化率，且完全符合TikTok内容政策及知识产权规则。</li>
+                <li>通过TikTok Login Kit完成用户身份验证（申请shop.data.read、video.list、user.info.basic基础权限，及用于视频发布的video.upload、video.publish权限；绝不申请comment.write、message.read、user.phoneNumber.read等敏感权限）。 <!-- 修改：删除content.create，新增视频发布权限 --></li>
+                <li>保障服务安全，防范欺诈行为（如异常订单检测、账号反仿冒），严格遵循TikTok安全规则及反作弊机制，不干扰TikTok平台正常运营。</li>
+                <li>在用户明确授权下，通过TikTok官方Content Posting API上传并发布视频至TikTok平台，帮助商家实现视频定时/批量发布策略，完全符合TikTok内容发布政策及频率限制要求。 <!-- 新增：视频发布场景 --></li>
+            </ol>
+
+            <h2>3. 数据合规承诺</h2>
+            <ol>
+                <li>不收集敏感数据：不获取手机号、精确GPS定位、生物识别信息、用户私信、支付信息等TikTok禁止收集的敏感数据。</li>
+                <li>数据传输合规：与TikTok美国服务器交互时，所有数据均采用TLS 1.3端到端加密传输，完全符合TikTok全球数据处理协议（GDPA）及GDPR下的标准合同条款（SCC）。</li>
+                <li>数据存储与跨境：数据存储于中国境内阿里云服务器，必要数据向TikTok美国服务器跨境传输已通过中国监管机构备案（符合《个人信息出境标准合同办法》）。</li>
+                <li>数据留存期限：业务数据留存90天（用户注销账号后立即删除）；访问日志留存30天（到期永久删除，无备份留存）；用于发布的视频文件/链接仅留存至发布成功后立即删除，无备份。 <!-- 新增：视频发布数据留存规则 --></li>
+                <li>数据使用边界：不二次使用数据、不进行数据变现、不构建用户画像、不基于收集的数据开展个性化广告投放。</li>
+            </ol>
+
+            <h2>4. 信息共享与披露</h2>
+            <p>我们<strong>绝不会出售、出租、转让或共享</strong>您的个人信息给任何第三方，除非TikTok或法律要求：</p>
+            <ul>
+                <li>向TikTok公司：仅提供启用TikTok API功能所需的必要数据（含视频发布相关数据，通过TLS 1.3加密传输；跨境传输符合中国数据出境监管要求）。 <!-- 修改：新增视频发布数据 --></li>
+                <li>法律法规要求：遵守适用法律、法规或有效的司法程序要求（如法院判决、监管调查）。</li>
+                <li>安全保护：保护我们的合法权益、用户安全或防范违法活动（符合TikTok要求；不向未获批准的第三方共享数据）。</li>
+            </ul>
+
+            <h2>5. 儿童隐私保护</h2>
+            <p>我们不面向13周岁以下儿童（依据美国COPPA法规），我们不会故意收集13周岁以下儿童的个人信息。</p>
+            <p>若我们发现不慎收集了13周岁以下儿童的个人信息，将在发现后24小时内立即删除该等信息。家长/监护人可通过legal@xxcompany.com联系我们，申请删除其子女的相关数据（我们将在7个工作日内响应处理）。</p>
+
+            <h2>6. 您的权利（数据主体权利）</h2>
+            <p>您可通过luengtiger@gmail.com行使以下数据权利（15个工作日内响应）：</p>
+            <ul>
+                <li>访问权：请求获取我们持有的您的个人数据副本（CSV格式）。</li>
+                <li>更正权：请求更正不准确的个人数据。</li>
+                <li>删除权：请求删除您的个人数据（法律规定的例外情况除外）。</li>
+                <li>撤回同意权：随时撤销对数据处理的同意（操作路径：TikTok App > 设置 > 授权应用 > 撤销TikTok店铺数据分析工具访问权限；撤销后将立即终止待执行的视频发布任务）。 <!-- 修改：新增撤销授权对视频发布的影响 --></li>
+                <li>数据可携带权：请求以机器可读格式（CSV/JSON）获取您的数据。</li>
+            </ul>
+
+            <h2>7. 数据安全措施</h2>
+            <p>我们采取TikTok认可的安全措施保护您的数据：</p>
+            <ul>
+                <li>传输安全：所有数据传输（含向TikTok美国服务器跨境传输、视频发布相关数据）均采用TLS 1.3端到端加密。 <!-- 修改：新增视频发布数据加密 --></li>
+                <li>存储安全：存储数据采用AES-256加密（存储于中国境内阿里云服务器）。</li>
+                <li>访问控制：基于角色的访问控制（RBAC）+ 多因素认证（仅授权人员可访问数据）。</li>
+                <li>安全审计：每月进行安全审计和漏洞扫描（符合TikTok安全标准）。</li>
+                <li>泄露通知：发现数据泄露后72小时内通知用户及监管机构（符合TikTok要求及《个人信息保护法》）。</li>
+                <li>日志留存：访问日志保留30天后永久删除（无备份）。</li>
+            </ul>
+
+            <h2>8. 政策更新</h2>
+            <p>如因TikTok开发者政策或适用法律（含跨境数据法规）要求需更新本政策，我们将：</p>
+            <ul>
+                <li>在本页面发布更新后的政策，并标注新的“最后更新日期”。</li>
+                <li>如涉及重大变更，提前30天通过邮件/应用内通知告知您。</li>
+                <li>提供拒绝变更的选项（您可注销账号以拒绝更新后的政策）。</li>
+            </ul>
+
+            <h2>9. 联系我们</h2>
+            <p>如对本隐私政策有疑问或希望行使数据权利，请联系：</p>
+            <ul>
+                <li>运营主体：佛山市赫本服装实业有限公司</li>
+                <li>邮箱：luengtiger@gmail.com</li>
+                <li>网址：https://www.lezshoou.com</li>
+                <li>响应时限：15个工作日内回复您的请求（儿童数据请求7个工作日内）。</li>
+            </ul>
+
+            <div class="signature">
+                <p>签署方：佛山市赫本服装实业有限公司</p>
+                <p>日期：2026年3月9日</p> <!-- 修改：更新签署日期 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 语言切换JS -->
+    <script>
+        function showEn() {
+            document.querySelector('.en-section').style.display = 'block';
+            document.querySelector('.cn-section').style.display = 'none';
+        }
+        function showCn() {
+            document.querySelector('.en-section').style.display = 'none';
+            document.querySelector('.cn-section').style.display = 'block';
+        }
+        // 页面加载默认显示英文
+        window.onload = function() {
+            showEn();
+        };
+    </script>
+</body>
+</html>
