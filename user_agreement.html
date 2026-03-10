@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Developer API User Agreement - TikTok Shop Analytics Tool | TikTok Compliant</title>
+    <style>
+        /* 全局样式重置 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        /* 主体容器 */
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        /* 标题样式 */
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        h2 {
+            color: #2563eb;
+            margin: 25px 0 15px;
+            font-size: 18px;
+        }
+        h3 {
+            color: #1e40af;
+            margin: 20px 0 10px;
+            font-size: 16px;
+        }
+        /* 语言切换按钮 */
+        .lang-toggle {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-toggle button {
+            padding: 10px 20px;
+            border: none;
+            background: #2563eb;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background 0.3s;
+        }
+        .lang-toggle button:hover {
+            background: #1d4ed8;
+        }
+        /* 语言区块切换 */
+        .lang-section { display: block; }
+        .cn-section { display: none; }
+        /* 高亮提示 */
+        .highlight { color: #dc2626; font-weight: bold; }
+        /* TikTok合规提示块 */
+        .tiktok-note {
+            background: #fef3f2;
+            padding: 15px;
+            border-left: 4px solid #dc2626;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+        /* 合规承诺块 */
+        .compliance-commitment {
+            background: #e8f4f8;
+            padding: 15px;
+            border-left: 4px solid #2563eb;
+            margin: 15px 0;
+        }
+        /* 列表样式 */
+        ul { margin-left: 25px; margin-bottom: 15px; }
+        li { margin: 8px 0; }
+        /* 更新日期 */
+        .update-note {
+            font-style: italic;
+            color: #6b7280;
+            margin: 10px 0 20px;
+        }
+        /* 签署栏 */
+        .signature {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .container { padding: 20px; }
+            h1 { font-size: 20px; }
+            h2 { font-size: 16px; }
+            h3 { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 语言切换按钮 -->
+        <div class="lang-toggle">
+            <button onclick="showEn()">English</button>
+            <button onclick="showCn()">中文</button>
+        </div>
+
+        <!-- 英文版本（TikTok审核核心） -->
+        <div class="en-section lang-section" id="en-content">
+            <h1>TikTok Developer API User Agreement</h1>
+            <p class="update-note"><strong>Last updated:</strong> 2026年03月10日 | <strong>Effective date:</strong> 2026年03月10日</p> <!-- 修改：更新日期 -->
+            <div class="tiktok-note">
+                <p>This Agreement strictly complies with TikTok Developer Policies (2026), TikTok Global Data Processing Agreement (GDPA), COPPA, GDPR, CCPA, and all applicable local laws and regulations, including TikTok Content Posting API Policy.</p> <!-- 修改：新增视频发布API政策合规 -->
+            </div>
+
+            <h2>1. Agreement Declaration and Scope of Application</h2>
+            <p>This Agreement is a legally binding contract between you ("User") and 佛山市赫本服装实业有限公司 ("we", "us", "our") regarding your use of TikTok Shop Analytics Tool ("Application") and related TikTok Developer API services (including TikTok Content Posting API for video publishing).</p> <!-- 修改：新增视频发布API说明 -->
+            <p>The Application is developed based on TikTok Developer API to provide services in accordance with TikTok-approved business scenarios. Your use of the Application constitutes acceptance of all terms of this Agreement.</p>
+
+            <h2>2. User Authorization and API Norms</h2>
+            <h3>(1) Authorization Process</h3>
+            <p>To use core functions, you must complete TikTok OAuth 2.0 authorization, explicitly granting permission to access your TikTok account public data. We only apply for the minimum necessary permissions:</p>
+            <ul>
+                <li>Basic Permissions: Apply for shop.data.read, video.list, user.info.basic permissions for data analysis; apply for video.upload, video.publish permissions for authorized video publishing (only with your explicit consent)</li> <!-- 修改：删除冲突表述，新增视频发布权限 -->
+                <li>Sensitive Permissions: Never apply for comment.write, message.read, user.phoneNumber.read or other sensitive permissions unrelated to data analysis and video publishing</li> <!-- 修改：调整敏感权限表述 -->
+            </ul>
+            <p>You may revoke authorization at any time in TikTok Account Settings > Authorized Apps. We will immediately stop using your data and terminate pending video publishing tasks upon revocation.</p> <!-- 修改：新增撤回授权对视频发布的影响 -->
+
+            <h3>(2) API Usage Restrictions</h3>
+            <p>We strictly comply with TikTok API rate limits and usage rules, and prohibit:</p>
+            <ul>
+                <li>Crawling non-public TikTok data or violating TikTok's robots.txt rules</li>
+                <li>Publishing infringing, illegal, or misleading content on behalf of users (all published videos comply with TikTok Community Guidelines)</li> <!-- 修改：补充视频发布内容合规 -->
+                <li>Reselling or renting TikTok API permissions</li>
+                <li>Exceeding TikTok Content Posting API rate limits (≤6 requests per minute per access_token, ≤50 videos per day per account)</li> <!-- 新增：视频发布频率限制 -->
+                <li>Any behavior that harms TikTok's platform ecosystem</li>
+            </ul>
+            <p class="highlight">We will never exceed authorized API call limits or use APIs for unapproved purposes, including unauthorized video publishing without user consent.</p> <!-- 修改：新增视频发布授权要求 -->
+
+            <h2>3. Data Collection, Usage and Protection</h2>
+            <h3>(1) Data Collection Scope (Data Minimization Principle)</h3>
+            <p>We only collect necessary TikTok public data as required by TikTok policies:</p>
+            <ul>
+                <li>Public nickname</li>
+                <li>Avatar URL</li>
+                <li>User openID (only for identity identification)</li>
+                <li>Device IP (only retain network segment, anonymized by SHA-256)</li>
+                <li>TikTok Shop operational data (order volume, unit price, transaction amount, inventory status)</li>
+                <li>Video performance data (play count, like count, comment count, conversion rate)</li>
+                <li>Public competitor shop data (transaction data, best-selling product info, video performance)</li>
+                <li>Public video scripts of best-selling products</li>
+                <li>Voluntarily submitted video files/links, captions, hashtags (only for authorized video publishing, deleted immediately after successful publishing)</li> <!-- 新增：视频发布相关数据收集 -->
+            </ul>
+            <p class="highlight">WE DO NOT collect sensitive data (phone number, precise GPS, biometrics, user private messages, payment information, trade secrets of competitors).</p>
+
+            <h3>(2) Specific Business Purposes (TikTok-Approved)</h3>
+            <p>We use the collected TikTok public data ONLY for the following specific, TikTok-approved business purposes:</p>
+            <ol>
+                <li>Analyze TikTok Shop operational data (order volume, unit price, transaction amount, inventory status) and video performance data (play count, like count, comment count, conversion rate) to generate real-time operational reports for merchants, helping them optimize product pricing and content release strategies.</li>
+                <li>Collect and analyze public competitor data (shop transaction data, best-selling product information, video operation performance) to provide merchants with market trend analysis and operational optimization suggestions (only use publicly disclosed data, no access to trade secrets or private information of competitors).</li>
+                <li>Extract and analyze video scripts of best-selling products (only from public TikTok videos) to help merchants optimize content creation strategies, improve video conversion rates, and comply with TikTok Content Policy and Intellectual Property Rules.</li>
+                <li>Authenticate user identity via TikTok Login Kit (apply for basic permissions as specified in Section 2.1).</li> <!-- 修改：简化权限表述，避免冲突 -->
+                <li>Ensure service security and prevent fraudulent activities (e.g., abnormal order detection, account anti-counterfeiting) in accordance with TikTok Security Rules and anti-cheating mechanisms, without interfering with TikTok's platform operation.</li>
+                <li>Publish videos to TikTok via official Content Posting API (only with your explicit authorization) to implement scheduled/batch video publishing strategies, fully compliant with TikTok content and rate limit requirements.</li> <!-- 新增：视频发布场景 -->
+            </ol>
+
+            <h3>(3) Data Compliance Commitment</h3>
+            <div class="compliance-commitment">
+                <ul>
+                    <li><strong>Data transmission:</strong> All data is encrypted via TLS 1.3 (end-to-end encryption) when interacting with TikTok US servers, fully compliant with TikTok Global Data Processing Agreement (GDPA) and Standard Contractual Clauses (SCCs) under GDPR, including video publishing data.</li> <!-- 修改：新增视频发布数据加密 -->
+                    <li><strong>Data storage:</strong> Stored on Alibaba Cloud servers in China (mainland), with cross-border transmission of necessary data to TikTok US servers approved by Chinese regulatory authorities (in accordance with the Measures for Standard Contracts for Outbound Transfer of Personal Information).</li>
+                    <li><strong>Data retention:</strong> 90 days for business data (immediately deleted after user account cancellation); 30 days for access logs (permanently deleted after expiration, no backup retention); video files/links for publishing are deleted immediately after successful publishing (no backup).</li> <!-- 修改：新增视频发布数据留存规则 -->
+                    <li><strong>Data usage boundary:</strong> No secondary use, no data monetization, no user profiling, and no personalized advertising based on collected data.</li>
+                </ul>
+            </div>
+
+            <h2>4. User Rights and Obligations</h2>
+            <h3>(1) User Rights</h3>
+            <ul>
+                <li>Right to access: Request a copy of all your data we collect</li>
+                <li>Right to correction: Request correction of inaccurate personal data</li>
+                <li>Right to deletion: Request permanent deletion of your data (except legal retention requirements)</li>
+                <li>Right to withdraw consent: Revoke API authorization at any time, including revocation of video publishing permissions</li> <!-- 修改：新增视频发布权限撤回 -->
+            </ul>
+
+            <h2>5. Contact Information</h2>
+            <p>For questions about this Agreement or data privacy, contact us:</p>
+            <ul>
+                <li>Operator: 佛山市赫本服装实业有限公司</li>
+                <li>Email: luengtiger@gmail.com</li>
+                <li>Response Time: 15 business days</li>
+            </ul>
+
+            <div class="signature">
+                <p>Signed by: 佛山市赫本服装实业有限公司</p>
+                <p>Date: 2026年03月10日</p> <!-- 修改：更新签署日期 -->
+            </div>
+        </div>
+
+        <!-- 中文版本 -->
+        <div class="cn-section lang-section" id="cn-content">
+            <h1>TikTok开发者API用户协议</h1>
+            <p class="update-note"><strong>最后更新日期：</strong> 2026年03月10日 | <strong>生效日期：</strong> 2026年03月10日</p> <!-- 修改：更新日期 -->
+            <div class="tiktok-note">
+                <p>本协议严格遵守TikTok 2026开发者政策、TikTok全球数据处理协议（GDPA）、COPPA、GDPR、CCPA及所有适用的本地法律法规，包括TikTok Content Posting API视频发布政策。</p> <!-- 修改：新增视频发布API政策合规 -->
+            </div>
+
+            <h2>一、协议声明与适用范围</h2>
+            <p>本协议是你（用户）与佛山市赫本服装实业有限公司（以下简称“我们”）之间关于使用TikTok店铺分析工具（以下简称“本应用”）及相关TikTok开发者API服务（含用于视频发布的TikTok Content Posting API）的法律协议。</p> <!-- 修改：新增视频发布API说明 -->
+            <p>本应用基于TikTok开发者API开发，仅用于TikTok批准的商业场景。你使用本应用即表示同意接受本协议全部条款。</p>
+
+            <h2>二、用户授权与API使用规范</h2>
+            <h3>（一）授权流程</h3>
+            <p>使用核心功能前，你需完成TikTok OAuth 2.0授权流程，明确授予本应用访问你TikTok账号公开数据的权限。我们仅申请实现功能所必需的最小权限：</p>
+            <ul>
+                <li>基础权限：为数据分析申请shop.data.read、video.list、user.info.basic权限；为授权后的视频发布申请video.upload、video.publish权限（仅在你明确同意后申请）</li> <!-- 修改：删除冲突表述，新增视频发布权限 -->
+                <li>敏感权限：绝不申请与数据分析、视频发布无关的comment.write、message.read、user.phoneNumber.read等敏感权限</li> <!-- 修改：调整敏感权限表述 -->
+            </ul>
+            <p>你可随时在TikTok账号设置 > 授权应用中撤回授权，撤回后我们将立即停止使用你的数据，并终止待执行的视频发布任务。</p> <!-- 修改：新增撤回授权对视频发布的影响 -->
+
+            <h3>（二）API使用限制</h3>
+            <p>我们严格遵守TikTok API调用频率限制和使用规则，严禁以下行为：</p>
+            <ul>
+                <li>爬取TikTok非公开数据或违反TikTok robots.txt规则</li>
+                <li>代用户发布侵权、违法、误导性内容（所有发布的视频均符合TikTok社区规范）</li> <!-- 修改：补充视频发布内容合规 -->
+                <li>转售、出租TikTok API权限</li>
+                <li>超出TikTok Content Posting API频率限制（单access_token每分钟≤6次请求，单账号每日发布视频≤50条）</li> <!-- 新增：视频发布频率限制 -->
+                <li>任何损害TikTok平台生态的行为</li>
+            </ul>
+            <p class="highlight">我们绝不会超出授权的API调用频次，也不会将API用于未批准的用途，包括未经用户同意的视频发布行为。</p> <!-- 修改：新增视频发布授权要求 -->
+
+            <h2>三、数据收集、使用与保护</h2>
+            <h3>（一）数据收集范围（数据最小化原则）</h3>
+            <p>我们仅根据TikTok政策要求收集必要的用户数据：</p>
+            <ul>
+                <li>公开昵称</li>
+                <li>头像URL</li>
+                <li>用户openID（仅用于身份标识）</li>
+                <li>设备IP（仅保留网段，SHA-256匿名化处理）</li>
+                <li>TikTok店铺运营数据（订单量、客单价、成交金额、库存状态）</li>
+                <li>视频表现数据（播放量、点赞数、评论数、转化率）</li>
+                <li>竞品公开店铺数据（交易数据、热销品信息、视频运营表现）</li>
+                <li>热销品公开视频脚本</li>
+                <li>你自愿提交的视频文件/链接、标题、话题标签（仅用于授权后的视频发布，发布成功后立即删除）</li> <!-- 新增：视频发布相关数据收集 -->
+            </ul>
+            <p class="highlight">我们不会收集敏感数据：不获取手机号、精确GPS定位、生物识别信息、用户私信、支付信息、竞品商业秘密等TikTok禁止收集的敏感数据。</p>
+
+            <h3>（二）特定商业场景（TikTok批准）</h3>
+            <p>我们仅将收集的TikTok公开数据用于TikTok批准的以下特定商业场景：</p>
+            <ol>
+                <li>分析TikTok店铺运营数据（订单量、客单价、成交金额、库存状态）及视频表现数据（播放量、点赞数、评论数、转化率），为商家生成实时运营报表，助力商家优化商品定价、内容发布策略。</li>
+                <li>收集并分析竞品公开数据（店铺交易数据、热销品信息、视频运营表现），为商家提供市场趋势分析及运营优化建议（仅使用公开披露数据，不获取竞品商业秘密或私密信息）。</li>
+                <li>提取分析热销品的视频脚本（仅来自TikTok公开视频内容），帮助商家优化内容创作策略、提升视频转化率，且完全符合TikTok内容政策及知识产权规则。</li>
+                <li>通过TikTok Login Kit完成用户身份验证（申请本协议第二条第（一）款约定的权限）。</li> <!-- 修改：简化权限表述，避免冲突 -->
+                <li>保障服务安全，防范欺诈行为（如异常订单检测、账号反仿冒），严格遵循TikTok安全规则及反作弊机制，不干扰TikTok平台正常运营。</li>
+                <li>在你明确授权下，通过TikTok官方Content Posting API发布视频至TikTok平台，帮助你实现视频定时/批量发布策略，完全符合TikTok内容发布政策及频率限制要求。</li> <!-- 新增：视频发布场景 -->
+            </ol>
+
+            <h3>（三）数据合规承诺</h3>
+            <div class="compliance-commitment">
+                <ul>
+                    <li><strong>数据传输合规：</strong>与TikTok美国服务器交互时，所有数据（含视频发布相关数据）均采用TLS 1.3端到端加密传输，完全符合TikTok全球数据处理协议（GDPA）及GDPR下的标准合同条款（SCC）。</li> <!-- 修改：新增视频发布数据加密 -->
+                    <li><strong>数据存储与跨境：</strong>数据存储于中国境内阿里云服务器，必要数据向TikTok美国服务器跨境传输已通过中国监管机构备案（符合《个人信息出境标准合同办法》）。</li>
+                    <li><strong>数据留存期限：</strong>业务数据留存90天（用户注销账号后立即删除）；访问日志留存30天（到期永久删除，无备份留存）；用于发布的视频文件/链接仅留存至发布成功后立即删除，无备份。</li> <!-- 修改：新增视频发布数据留存规则 -->
+                    <li><strong>数据使用边界：</strong>不二次使用数据、不进行数据变现、不构建用户画像、不基于收集的数据开展个性化广告投放。</li>
+                </ul>
+            </div>
+
+            <h2>四、用户权利与义务</h2>
+            <h3>（一）用户权利</h3>
+            <ul>
+                <li>访问权：请求获取我们收集的你的所有数据副本</li>
+                <li>更正权：请求更正不准确的个人数据</li>
+                <li>删除权：请求永久删除你的数据（法律保留要求除外）</li>
+                <li>撤回同意权：随时撤回API授权，包括撤回视频发布权限</li> <!-- 修改：新增视频发布权限撤回 -->
+            </ul>
+
+            <h2>五、联系我们</h2>
+            <p>如对本协议或数据隐私有疑问，请联系：</p>
+            <ul>
+                <li>运营主体：佛山市赫本服装实业有限公司</li>
+                <li>邮箱：luengtiger@gmail.com</li>
+                <li>响应时限：15个工作日</li>
+            </ul>
+
+            <div class="signature">
+                <p>签署方：佛山市赫本服装实业有限公司</p>
+                <p>日期：2026年03月10日</p> <!-- 修改：更新签署日期 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 语言切换脚本 -->
+    <script>
+        // 显示英文版本
+        function showEn() {
+            document.getElementById('en-content').style.display = 'block';
+            document.getElementById('cn-content').style.display = 'none';
+            document.title = "TikTok Developer API User Agreement - TikTok Shop Analytics Tool | TikTok Compliant";
+        }
+        // 显示中文版本
+        function showCn() {
+            document.getElementById('en-content').style.display = 'none';
+            document.getElementById('cn-content').style.display = 'block';
+            document.title = "TikTok开发者API用户协议 - TikTok店铺分析工具 | TikTok合规";
+        }
+        // 页面加载默认显示英文（TikTok审核优先）
+        window.onload = function() {
+            showEn();
+        };
+    </script>
+</body>
+</html>
